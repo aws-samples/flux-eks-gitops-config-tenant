@@ -1,11 +1,10 @@
-## My Project
+# Managing tenant configuration with GitOps using Flux 
 
-TODO: Fill this README out!
+This is a tenant GitOps configuration sample repository for Flux, related to the project [flux-eks-gitops-config](https://github.com/aws-samples/flux-eks-gitops-config).
 
-Be sure to:
+Tenants are on-boarded on Kubernetes clusters by platform administrators, who are in charge of creating a Namespace, setting appropriate quotas, creating a Service Account and RBAC with permissions restricted to the Namespace for Flux to sync configuration and a GitRepository CR pointing to the tenant repository (this one).
 
-* Change the title in this README
-* Edit your repository description on GitHub
+The tenant repository is owned by a development team and stores the Kubernetes manifests, [Kustomizations](https://fluxcd.io/docs/components/kustomize/api/) and [HelmReleases](https://fluxcd.io/docs/components/helm/helmreleases/) Custom Resources to deploy the application(s) on the Kubernetes clusters. For each tenant, there's a Kustomization on the platform team repository pointing to a tenant repository, branch and path. 
 
 ## Security
 
