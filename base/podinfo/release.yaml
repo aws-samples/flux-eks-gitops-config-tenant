@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: podinfo
         namespace: podinfo
-      version: 5.0.0
+      version: 6.5.3
   values:
     # Service should be disabled when using Flagger
     service:
